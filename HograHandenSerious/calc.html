@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <script src="js/script.js"></script>
+
+
+</head>
+
+<body>
+
+    <FORM name="calcForm">
+        Välj tjänst:
+        <SELECT NAME="serviceItem" onChange="calculatePrice()" id="serviceItem">
+                <OPTION value="10">HEMSTÄD</OPTION>
+                <OPTION value="20">FLYTTSTÄD</OPTION>
+            </SELECT>
+
+        <br> Antal toaletter:
+        <SELECT name="toiletItem" onChange="calculatePrice()" id="toiletItem">
+                <OPTION value="1">1</OPTION>
+                <OPTION value="2">2</OPTION>
+                <OPTION value="3">3</OPTION>
+                <OPTION value="4">4</OPTION>
+            </SELECT>
+
+        <br> Antal kvm:
+        <INPUT type="number" name="areaItem" id="areaItem" onchange="calculatePrice()">
+    </FORM>
+    <BUTTON type="button" onClick="calculatePrice()">Beräkna</BUTTON>
+    <br> Ungefärligt pris:
+    <INPUT type="text" id="PicExtPrice" size=8>
+
+
+</body>
+
+</html>
+
+
+<!--
+
+Tjänst: _______
+Antal toaletter: _______
+Storlek bostad: ________
+
+-->

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Högra Handen Allservice</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <div class="header-top">
+            <h1>Högra Handen Allservice</h1>
+            <span>033-35 60 60</span>
+
+        </div>
+
+        <!-- HEADER -->
+
+        <header class="header-wrapper">
+
+            <div class="header-title">
+                <h3> En hjälpande hand när du behöver den som mest.</h3>
+            </div>
+
+
+            <nav class="cl-effect-1 link-menu">
+
+                <a href="#hslink">Hemstäd</a>
+                <a href="#fslink">Flyttstäd</a>
+                <a href="#fhlink">Flytthjälp</a>
+
+            </nav>
+
+        </header>
+
+        <!-- MAIN -->
+        <main class="main-wrapper">
+
+            <div class="intro-content">
+                <h2>Vad kul...</h2>
+                <p>...Att du har hittat hit. Antingen har du sett en dammråtta för mycket eller så står du inför en kommande flytt,
+                    <br>oavsett vilket så finns vi här för att hjälpa dig.
+                </p>
+            </div>
+
+
+            <div class="services-content">
+                <div class="hs-content">
+
+
+                    <div class="hs-content-text" id="hslink">
+                        <h2> Hemstäd</h2>
+                        <p>Det här är en text som beskriver vad hemstäd är.</p>
+                    </div>
+                    <img src="img/hsprofile.png">
+                </div>
+
+
+
+                <div class="fs-content" id="fslink">
+
+                    <div class="fs-content-text">
+                        <h2>Flyttstäd</h2>
+                        <p>Det här är en text som beskriver vad flyttstäd är.</p>
+                    </div>
+                    <img src="img/fsprofile.png">
+                </div>
+
+
+
+                <div class="fh-content" id="fhlink">
+                    <div class="fh-content-text">
+                        <h2>Flytthjälp</h2>
+                        <p>Det här är en text som beskriver vad flytthjälp är.</p>
+                    </div>
+                    <img src="img/fhprofile2.png">
+
+                </div>
+            </div>
+
+
+
+
+            <div class="calc-content">
+                <h2> Beräkna uppskattat pris:</h2>
+                <div class="calc-form">
+                    <FORM name="calcForm">
+                        <div>
+                            <span>Välj tjänst: </span>
+                            <SELECT NAME="serviceItem" onChange="calculatePrice()" id="serviceItem">
+                                <OPTION value="10">HEMSTÄD</OPTION>
+                                <OPTION value="20">FLYTTSTÄD</OPTION>
+                            </SELECT>
+                        </div>
+                        <div>
+                            <span>Antal toaletter:</span>
+                            <SELECT name="toiletItem" onChange="calculatePrice()" id="toiletItem">
+                                <OPTION value="1">1</OPTION>
+                                <OPTION value="2">2</OPTION>
+                                <OPTION value="3">3</OPTION>
+                                <OPTION value="4">4</OPTION>
+                        </div>
+                            </SELECT>
+                            <div class="kvm">
+                                <span>Antal kvm:</span>
+                                <INPUT type="number" name="areaItem" id="areaItem" onchange="calculatePrice()">
+                            </div>
+                    </FORM>
+                    <BUTTON class="button" type="button" onClick="calculatePrice()">Beräkna</BUTTON>
+                    <div class="priceTextBox">
+                        <h3>Ungefärligt pris:</h3>
+                        <INPUT type="text" id="PicExtPrice" size=8 readonly>
+                    </div>
+                    </div>
+                </div>
+
+
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer-wrapper">
+            <div class="contact-details">
+                <h2>Kontaktuppgifter:</h2>
+
+                <ul>
+                    <li>Namn: Emma Alenfors</li>
+                    <li>Adress: Kungsgatan 1337 Borås</li>
+                    <li>Telefonnummer: 033-356060</li>
+                </ul>
+
+            </div>
+            <div class="contact-form-content">
+
+                <div class="contact-form">
+                    <h2> Kontakta oss:</h2>
+                    <form action="https://formspree.io/mlepzord" method="POST">
+                        <label>
+                            
+                            Namn:
+                            <input type="text" name="name">
+                        
+                        </label> Telefonnummer:
+                        <label>
+                            <input type="text" name="phone">
+                        </label>
+                        <label>
+                            E-postadress:
+                            <input type="text" name="_replyto">
+                        </label>
+                        <label>
+                            Meddelande:
+                            <textarea name="message"></textarea>
+                        </label>
+
+                        <!-- your other form fields go here -->
+
+                        <input class="button" type="submit" value="Send">
+                        <!--button class="button" type="submit">Skicka</button-->
+                        <input type="hidden" name="_next" value="/calc.html" />
+
+                    </form>
+                </div>
+            </div>
+
+
+        </footer>
+
+        </div>
+
+</body>
+
+</html>
